@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "ameb1a38c50": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

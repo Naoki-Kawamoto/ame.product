@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
+import Title from "./components/Title";
+import Form from "./components/Form";
+import Camera_Button from "./components/Camera_Button";
+import Submit_Button from "./components/Submit_Button";
 import './App.css';
+
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Title />
+      <Camera_Button />
+      <Form />
+      <Submit_Button />
+
+      <AmplifySignOut />
+
+
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App);
